@@ -1,11 +1,12 @@
 import  {  useContext, useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../context/UserContext';
 import { toast } from 'react-toastify';
 
 const Login = () => {
   const [error, setError] = useState('')
   const {login,signInWithGoogle} = useContext(AuthContext);
+  const navigate = useNavigate();
 
 
   const handleSignIn =(event)=>{
@@ -18,6 +19,7 @@ const Login = () => {
     .then(result=>{
       console.log(result.user)
       toast.success('Login successful.')
+      navigate('/home')
     })
     .catch(error=>{
       setError(error.message)

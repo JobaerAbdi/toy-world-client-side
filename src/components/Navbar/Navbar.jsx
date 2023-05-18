@@ -1,8 +1,24 @@
 import { Link } from "react-router-dom";
 import logo from '../../assets/logo.webp'
+import { useContext } from "react";
+import { AuthContext } from "../context/UserContext";
+import { toast } from "react-toastify";
 
 
 const Navbar = () => {
+  const {user, logOut} = useContext(AuthContext);
+
+  const handleSignOut = ()=>{
+    logOut()
+    .then(()=>{
+        toast.success('Sing out successful')
+    })
+    .catch(error=>{
+        toast.error(error.message)
+    })
+  };
+
+
   const navItems = (
     <>
       <li className="font-bold">
@@ -11,21 +27,27 @@ const Navbar = () => {
       <li className="font-bold">
         <Link to="/allToys">All Toys</Link>
       </li>    
-      <li className="font-bold">
-        <Link to="/myToys">My Toys</Link>
-      </li>    
-      <li className="font-bold">
+      {user && user?.email ? 
+      <>
+        <li className="font-bold">
+          <Link to="/myToys">My Toys</Link>
+        </li> 
+        <li className="font-bold">
+          <Link to="/addToy">Add A Toy</Link>
+        </li> 
+        <li className="font-bold">
+           <button>Profile</button>
+        </li> 
+        <li className="font-bold">
+           <button onClick={handleSignOut}>Log Out</button>
+        </li> 
+      </> :
+       <li className="font-bold">
+         <Link to="/login">Login</Link>
+       </li> }  
+       <li className="font-bold">
         <Link to="/blogs">Blogs</Link>
-      </li>    
-      <li className="font-bold">
-        <button>Profile Pic</button>
-      </li> 
-      <li className="font-bold">
-        <Link to="/login">Login</Link>
-      </li> 
-      <li className="font-bold">
-        <button>Log Out</button>
-      </li>    
+      </li>  
     </>
   );
 
