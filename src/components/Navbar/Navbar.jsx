@@ -1,11 +1,8 @@
 import { Link } from "react-router-dom";
 import logo from '../../assets/logo.webp'
-import { useContext } from "react";
-import { AuthContext } from "../context/UserContext";
+
 
 const Navbar = () => {
-  const {user} = useContext(AuthContext);
-  console.log(user.email);
   const navItems = (
     <>
       <li className="font-bold">
