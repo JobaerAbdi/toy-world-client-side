@@ -1,0 +1,70 @@
+[
+    {
+      "CategoryName": "Cars",
+      "toys": [
+        {
+          "picture": "https://gotoshop.com.bd/image/cache///license-bmw-car-669r-3-speed-baby-electric-ride-on-toys-kids-battery-powered-remote-control-ride-on-car-500x500.jpg",
+          "name": "Super Car",
+          "price": 29.99,
+          "rating": 4.5
+        },
+        {
+          "picture": "https://gotoshop.com.bd/image/cache/bmw-z4-kids-rechargeable-car-with-spring-wheel-remote-and-dancing-age-1-10-years-500x500.jpg",
+          "name": "Hero Car",
+          "price": 24.99,
+          "rating": 4.2
+        }
+      ]
+    },
+    {
+      "CategoryName": "Trucks",
+      "toys": [
+        {
+          "picture": "https://www.toysnwheels.com.au/uploads/gallery_image/391image0%20(7).jpeg",
+          "name": "Holiday Trucks",
+          "price": 19.99,
+          "rating": 4.3
+        },
+        {
+          "picture": "https://cdn11.bigcommerce.com/s-6xghxe/images/stencil/1280x1280/products/872/20786/Red_2__20194.1676056972.jpg?c=3",
+          "name": "Race Trucks",
+          "price": 22.99,
+          "rating": 4.0
+        }
+      ]
+    },
+    {
+      "CategoryName": "Mini Fire Trucks",
+      "toys": [
+        {
+          "picture": "https://www.littleriders.com.au/assets/full/sx-1818.jpg?20230419134613",
+          "name": "Fire Rescue Hero",
+          "price": 17.99,
+          "rating": 4.4
+        },
+        {
+          "picture": "https://minifireengine.com.au/wp-content/uploads/2014/09/fire-engine-front.jpg",
+          "name": "Emergency Response",
+          "price": 15.99,
+          "rating": 4.3
+        }
+      ]
+    },
+    {
+      "CategoryName": "Mini Police Cars",
+      "toys": [
+        {
+          "picture": "https://cdn.shopify.com/s/files/1/0020/8057/1504/products/313979_1_lg_360x.jpg?v=1664515675",
+          "name": "Patrol Pursuit",
+          "price": 18.99,
+          "rating": 4.7
+        },
+        {
+          "picture": "https://cdn.shopify.com/s/files/1/0011/8367/8476/products/policecarwhiteinnova1_1800x1800.png?v=1649666285",
+          "name": "Law Enforcement Cruiser",
+          "price": 16.99,
+          "rating": 4.5
+        }
+      ]
+    }
+  ]

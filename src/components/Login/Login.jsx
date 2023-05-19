@@ -115,7 +115,7 @@ const Login = () => {
 
         </div>
         <p className='px-6 text-sm text-center text-black'>
-          Don't have an account yet?{' '}
+          New to Car Worlds?{' '}
           <Link to='/register' className='hover:underline font-semibold'>
             Sign up
           </Link>
