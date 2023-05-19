@@ -51,7 +51,7 @@ const Toys = () => {
                             </span>
                           </div>
                           <p className="text-gray-950 ">${toy.price}</p>
-                          <Link to={`/toy/:${car._id}`}>
+                          <Link to={`/singleToy/${car._id}`}>
                               <button className="bg-black btn-sm text-white rounded">View Details</button>
                           </Link>
                         </div>
