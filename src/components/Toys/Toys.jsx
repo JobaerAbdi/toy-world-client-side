@@ -1,9 +1,11 @@
 import { useEffect, useState } from "react";
 import "react-tabs/style/react-tabs.css";
 import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
+import { Link } from "react-router-dom";
 
 const Toys = () => {
   const [cars, setCars] = useState([]);
+  console.log(cars);
 
   useEffect(() => {
     fetch("http://localhost:5000/toys")
@@ -12,7 +14,7 @@ const Toys = () => {
   }, []);
 
   return (
-    <div className="container mx-auto mb-12 lg:px-14">
+    <div className="mx-auto mb-12 lg:px-14">
       <Tabs>
         <TabList>
           {cars.map((car, index) => (
@@ -49,9 +51,9 @@ const Toys = () => {
                             </span>
                           </div>
                           <p className="text-gray-950 ">${toy.price}</p>
-                          <button className="bg-black btn-sm text-white rounded">
-                            View Details
-                          </button>
+                          <Link to={`/toy/:${car._id}`}>
+                              <button className="bg-black btn-sm text-white rounded">View Details</button>
+                          </Link>
                         </div>
                       </div>
                     </div>
