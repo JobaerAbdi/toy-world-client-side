@@ -1,33 +1,32 @@
 import { useEffect, useState } from "react";
-import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
 import "react-tabs/style/react-tabs.css";
+import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
 
 const Toys = () => {
-  const [categories, setCategories] = useState([]);
+  const [cars, setCars] = useState([]);
 
   useEffect(() => {
     fetch("http://localhost:5000/toys")
       .then((res) => res.json())
-      .then((data) => setCategories(data));
+      .then((data) => setCars(data));
   }, []);
 
   return (
-    <div className="container mx-auto">
+    <div className="container mx-auto mb-12 lg:px-14">
       <Tabs>
         <TabList>
-          {categories.map((category, index) => (
-            <Tab key={index}>{category.CategoryName}</Tab>
+          {cars.map((car, index) => (
+            <Tab key={index}>{car.CategoryName}</Tab>
           ))}
         </TabList>
 
-        {categories.map((category, index) => (
+        {cars.map((car, index) => (
           <TabPanel key={index}>
             <div className="grid grid-cols-2 gap-4">
-              {category.toys.map((toy, subIndex) => (
+              {car.toys.map((toy, subIndex) => (
                 <div key={subIndex} className="bg-white p-4 shadow-md">
                   <div className="bg-white rounded-lg  overflow-hidden">
                     <div className="lg:flex">
-                      {/* Image side */}
                       <div className="lg:w-1/2">
                         <figure>
                           <img
@@ -38,30 +37,25 @@ const Toys = () => {
                         </figure>
                       </div>
 
-                      {/* Text side */}
                       <div className="lg:w-1/2 p-6">
                         <div className="card-body">
                           <h3 className="text-lg font-bold">{toy.name}</h3>
                           <div className=" items-center mb-2">
-                            <span className="text-yellow-500 ">
+                            <span className="text-lime-700">
                               {toy.rating} <i className="fas fa-star"></i>
                             </span>
-                            <span className="text-gray-600">
+                            <span className="text-black">
                               ({toy.rating})
                             </span>
                           </div>
-
-                          <p className="text-gray-600 ">${toy.price}</p>
-
-                          <button className="bg-indigo-500 btn-sm text-white rounded">
+                          <p className="text-gray-950 ">${toy.price}</p>
+                          <button className="bg-black btn-sm text-white rounded">
                             View Details
                           </button>
                         </div>
                       </div>
                     </div>
                   </div>
-
-                  <div></div>
                 </div>
               ))}
             </div>

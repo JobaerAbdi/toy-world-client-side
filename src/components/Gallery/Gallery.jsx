@@ -1,6 +1,6 @@
 const Gallery = () => {
   return (
-    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 lg:px-14">
+    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-14 lg:px-14">
       <div className="card w-96 h-72 bg-base-100 shadow-xl">
         <figure>
           <img
