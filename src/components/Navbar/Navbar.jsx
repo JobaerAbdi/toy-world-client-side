@@ -1,17 +1,20 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import logo from '../../assets/logo.webp'
 import { useContext } from "react";
 import { AuthContext } from "../context/UserContext";
 import { toast } from "react-toastify";
 
 
+
 const Navbar = () => {
   const {user, logOut} = useContext(AuthContext);
+  const navigate = useNavigate();
 
   const handleSignOut = ()=>{
     logOut()
     .then(()=>{
         toast.success('Sing out successful')
+        navigate('/login')
     })
     .catch(error=>{
         toast.error(error.message)
