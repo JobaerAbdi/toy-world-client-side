@@ -10,7 +10,7 @@ const AddToy = () => {
     const pictureUrl = form.pictureUrl.value;
     const name = form.name.value;
     const sellerName = form.sellerName.value;
-    const sellerEmail = user?.email;
+    const email = user?.email;
     const subCategory = form.subCategory.value;
     const price = form.price.value;
     const rating = form.rating.value;
@@ -21,7 +21,7 @@ const AddToy = () => {
       pictureUrl,
       name,
       sellerName,
-      sellerEmail,
+      email,
       subCategory,
       price,
       rating,

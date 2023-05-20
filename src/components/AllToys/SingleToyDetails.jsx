@@ -9,7 +9,7 @@ const SingleToyDetails = () => {
       <h1 className="text-center font-bold">Single Toy Details</h1>
       <div className="card card-side bg-base-100 shadow-xl">
         <figure className="w-1/2">
-         <img src={pictureUrl} alt="Toy" />
+         <img className="w-96 h-96" src={pictureUrl} alt="Toy" />
         </figure>
         <div className="card-body w-1/2">
           <h2 className="card-title">Toy Name: {name}</h2>
