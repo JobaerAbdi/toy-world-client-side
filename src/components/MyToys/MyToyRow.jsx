@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import Swal from "sweetalert2";
 
 const MyToyRow = ({toy , toys, setToys}) => {
@@ -32,7 +33,11 @@ const MyToyRow = ({toy , toys, setToys}) => {
     
   return (
     <tr>
-        <th><button className="btn btn-info">Update</button></th>
+        <th>
+            <Link to={`/updateToy/${_id}`}>
+            <button className="btn btn-info">Update</button>
+            </Link>
+        </th>
       <td>
         <div className="rounded-lg w-24 h-24">
           <img src={pictureUrl} alt="img" />
